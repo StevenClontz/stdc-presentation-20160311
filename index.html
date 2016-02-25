@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Metrizaibility in Generalized Inverse Limits</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -30,6 +30,8 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+</script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -42,56 +44,232 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Metrizaibility in Generalized Inverse Limits</h2>
-					<hr>
-					<h4>Steven Clontz</h4>
-					<p>2016-03-03</p>
-					<p>
-						<small>
-							Presentation for the <b>University of South Alabama</b>
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<h2>Metrizaibility in Generalized Inverse Limits</h2>
+						<hr>
+						<h4>Steven Clontz</h4>
+						<p>2016 March 3rd</p>
+						<p>
+							<small>
+								Presentation for the <b>University of South Alabama</b>
+							</small>
+						</p>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
+						<h3>Abstract</h3>
+						<p>
+  						For the metric arc I=[0,1] and continuum-valued bonding relation f closed in I^2, the inverse limit lim{I,f,ω} is the subspace of the countable power I^ω containing sequences x satisfying x(n)∈f(x(n+1)). A recent trend in continuum theory is to generalize this notion to lim{I,f,L}, where L is an arbitrary linear order. When L=ω, the inverse limit is a subspace of the metrizable space I^ω; however, we will show that when L is uncountable, the inverse limit cannot be metrizable unless f is trivial. Furthermore, when L is an uncountable well order, it will be shown that the inverse limit is not even Corson compact.
+						</p>
 					</section>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<section>
+						<h2>Background and Motivation</h2>
+						<h4>
+							Product space: \(I^\omega=[0,1]^{\{0,1,2,\dots\}}\)
+						</h4>
+						<p>
+							<img width="80%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+						</p>
+					</section>
+					<section>
+						<h4>Bonding map/relation: \(f\subseteq_{cl} I^2\)</h4>
+						<p>
+							<img width="40%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+							<img width="40%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+						</p>
+						<ul>
+							<li>
+								\(f(x)=[a_x,b_x]\) for all \(x\in[0,1]\).
+								(so \(f\) is connected\)
+							</li>
+							<li>\(f\) is surjective.</li>
+							<li>
+								If
+								\(a_x=b_x\) for all \(x\in[0,1]\), then \(f\)
+								corresponds to a continuous function.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Inverse Limit: \(\varprojlim\{I,f,\omega\}\)</h4>
+						<p>
+							<img width="80%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+						</p>
+						<ul>
+							<li>\(\vec x(n)\in f(\vec x(n+1))\)</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img width="50%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+						</p>
+						<h4>Some properties of \(\varprojlim\{I,f,\omega\}\):</h4>
+						<ul>
+							<li>Nonempty</li>
+							<li>Metrizable</li>
+							<li>Compact</li>
+							<li>Connected</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+					<section>
+						<h4>
+							Totally ordered index: \(\varprojlim\{I,f,L\}\subseteq I^L\)
+						</h4>
+						<p>
+							<img width="70%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+							<br/>
+							<small>\(L=\omega+\omega\)</small>
+						</p>
+						<ul style="font-size:0.8em">
+							<li>
+								\(\vec x(\alpha)\in f(\vec x(\beta))\)
+								for all \(\alpha\lt\beta\) in \(L\)
+							</li>
+							<li>
+								Assume \(f\) is idempotent:
+								\(f(x)=\{z:\exists y\in f(x)\text{ such that }z\in f(y)\}\),
+								i.e. \(f=f\circ f\).
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img width="50%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+						</p>
+						<h4>Some properties of \(\varprojlim\{I,f,L\}\):</h4>
+						<ul>
+							<li>Nonempty</li>
+							<li>Compact</li>
+							<li>Connected</li>
+							<li>Hausdorff</li>
+							<li><strike>Metrizable</strike> (?)</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Silly example: the identity relation \(\iota\)</h4>
+						<p>
+							<img width="70%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+						</p>
+						<p>\(\varprojlim\{I,\iota,L\}\cong I\) is metrizable</p>
+						<hr>
+						<p>We now assume \(f\not=\iota\).</p>
+					</section>
+					<section>
+						<h4>Counterexample: \(f=\gamma\), \(L=\omega_1\)</h4>
+						<p>
+							<img width="70%"
+									 src="img/omega-product.svg"
+									 style="background:white;">
+						</p>
+						<p>
+							\(\varprojlim\{I,\gamma,\omega_1\}\) is
+							the closed long ray of length \(\omega_1\), so not metrizable
+							(or even Corson compact)
+						</p>
+					</section>
+				</section>
+
+        <section>
+          <section>
+            <h2>The \(\Gamma\) condition</h2>
+						<p>
+							<img width="30%"
+									 src="img/gamma-condition.svg"
+									 style="background:white;">
+						</p>
+            <p>
+              There exist \(x,y\in I\) such that
+              \(\langle x,x\rangle,\langle x,y\rangle,\langle y,y\rangle\)
+              are all in \(f\)
+            </p>
+          </section>
+          <section>
+            <h4>If \(\iota\subseteq f\)...</h4>
+            <p>
+              <img width="30%"
+              		 src="img/contains-iota.svg"
+									 style="background:white;">
+            </p>
+            <p>
+              \(\Gamma\) is easily found to hold
+            </p>
+          </section>
+          <section>
+            <h4>Can \(f\) miss \(\iota\) completely?</h4>
+            <p>
+              <img width="30%"
+              		 src="img/misses-iota.svg"
+									 style="background:white;">
+            </p>
+            <p>
+              Contradicts connectedness of \(f\).
+            </p>
+          </section>
+          <section>
+            <h4>Can \(f\) only hit one point on \(\iota\)?</h4>
+            <p>
+              <img width="30%"
+              		 src="img/hits-iota-once.svg"
+									 style="background:white;">
+            </p>
+            <p>
+              Contradicts idempotence of \(f\).
+            </p>
+          </section>
+          <section>
+            <h4>Two cases to handle...</h4>
+            <p>
+            	Case 1: \(f\cap\iota\) is connected;
+            	contradicts idempotence of \(f\) via technical
+            	argument.
+            </p>
+            <p>Case 2: \(f\cap\iota\) disconnected</p>
+            <p>
+              <img width="30%"
+              		 src="img/two-points-nothing-between.svg"
+									 style="background:white;">
+            </p>
+            <p>
+              Contradicts idempotence of \(f\).
+            </p>
+          </section>
+        </section>
+
+				<section>
+					<section>
+						<h2>Applying condition \(\Gamma\)</h2>
+						<p>
+							Once \(\Gamma\) has been verified for the bonding relation,
+							we may restrict our attention to the two-point discrete space
+							\(2=\{0,1\}\) and investigate \(\varprojlim\{2,\gamma,L\}\).
+						</p>
+	          <p>
+	            <img width="30%"
+	            		 src="img/two-points-nothing-between.svg"
+									 style="background:white;">
+	          </p>
+	         </section>
 				</section>
 
 				<section>
@@ -410,6 +588,7 @@ Reveal.addEventListener( 'customevent', function() {
 
 				// Optional reveal.js plugins
 				dependencies: [
+					{ src: 'plugin/math/math.js', async: true },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
