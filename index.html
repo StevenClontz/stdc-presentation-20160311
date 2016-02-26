@@ -205,14 +205,14 @@
             </p>
           </section>
           <section>
-            <h4>If \(\iota\subseteq f\)...</h4>
+            <h4>If \(\iota\subsetneq f\)...</h4>
             <p>
               <img width="30%"
               		 src="img/contains-iota.svg"
 									 style="background:white;">
             </p>
             <p>
-              \(\Gamma\) is easily found to hold
+              \(\Gamma\) trivially holds
             </p>
           </section>
           <section>
@@ -238,16 +238,31 @@
             </p>
           </section>
           <section>
+            <h3>So \(f\cap\iota\) hits two points.</h3>
             <h4>Two cases to handle...</h4>
-            <p>
-            	Case 1: \(f\cap\iota\) is connected;
-            	contradicts idempotence of \(f\) via technical
-            	argument.
-            </p>
-            <p>Case 2: \(f\cap\iota\) disconnected</p>
+            <ol>
+            	<li>\(f\cap\iota\) is connected</li>
+            	<li>\(f\cap\iota\) is disconnected</li>
+            </ol>
+					</section>
+					<section>
+            <h4>
+            	Case 1: \(f\cap\iota\) is connected
+            </h4>
             <p>
               <img width="30%"
-              		 src="img/two-points-nothing-between.svg"
+              		 src="img/f-cap-iota-connected.svg"
+									 style="background:white;">
+            </p>
+            <p>
+              Contradicts surjectivity and idempotence of \(f\).
+            </p>
+					</section>
+					<section>
+            <h4>Case 2: \(f\cap\iota\) is disconnected</h4>
+            <p>
+              <img width="30%"
+              		 src="img/f-cap-iota-disconnected.svg"
 									 style="background:white;">
             </p>
             <p>
