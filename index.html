@@ -1,203 +1,203 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Metrizaibility in Generalized Inverse Limits</title>
+    <title>Metrizaibility in Generalized Inverse Limits</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-		<link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
 </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<section>
-						<h2>Metrizaibility in Generalized Inverse Limits</h2>
-						<hr>
-						<h4>Steven Clontz</h4>
-						<p>2016 March 3rd</p>
-						<p>
-							<small>
-								Presentation for the <b>University of South Alabama</b>
-							</small>
-						</p>
-					</section>
-					<section>
-						<h3>Abstract</h3>
-						<p>
-  						For the metric arc I=[0,1] and continuum-valued bonding relation f closed in I^2, the inverse limit lim{I,f,ω} is the subspace of the countable power I^ω containing sequences x satisfying x(n)∈f(x(n+1)). A recent trend in continuum theory is to generalize this notion to lim{I,f,L}, where L is an arbitrary linear order. When L=ω, the inverse limit is a subspace of the metrizable space I^ω; however, we will show that when L is uncountable, the inverse limit cannot be metrizable unless f is trivial. Furthermore, when L is an uncountable well order, it will be shown that the inverse limit is not even Corson compact.
-						</p>
-					</section>
-				</section>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <section>
+            <h2>Metrizaibility in Generalized Inverse Limits</h2>
+            <hr>
+            <h4>Steven Clontz</h4>
+            <p>2016 March 3rd</p>
+            <p>
+              <small>
+                Presentation for the <b>University of South Alabama</b>
+              </small>
+            </p>
+          </section>
+          <section>
+            <h3>Abstract</h3>
+            <p>
+              For the metric arc I=[0,1] and continuum-valued bonding relation f closed in I^2, the inverse limit lim{I,f,ω} is the subspace of the countable power I^ω containing sequences x satisfying x(n)∈f(x(n+1)). A recent trend in continuum theory is to generalize this notion to lim{I,f,L}, where L is an arbitrary linear order. When L=ω, the inverse limit is a subspace of the metrizable space I^ω; however, we will show that when L is uncountable, the inverse limit cannot be metrizable unless f is trivial. Furthermore, when L is an uncountable well order, it will be shown that the inverse limit is not even Corson compact.
+            </p>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						<h2>Background and Motivation</h2>
-						<h4>
-							Product space: \(I^\omega=[0,1]^{\{0,1,2,\dots\}}\)
-						</h4>
-						<p>
-							<img width="80%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-						</p>
-					</section>
-					<section>
-						<h4>Bonding map/relation: \(f\subseteq_{cl} I^2\)</h4>
-						<p>
-							<img width="40%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-							<img width="40%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-						</p>
-						<ul>
-							<li>
-								\(f(x)=[a_x,b_x]\) for all \(x\in[0,1]\).
-								(so \(f\) is connected\)
-							</li>
-							<li>\(f\) is surjective.</li>
-							<li>
-								If
-								\(a_x=b_x\) for all \(x\in[0,1]\), then \(f\)
-								corresponds to a continuous function.
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Inverse Limit: \(\varprojlim\{I,f,\omega\}\)</h4>
-						<p>
-							<img width="80%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-						</p>
-						<ul>
-							<li>\(\vec x(n)\in f(\vec x(n+1))\)</li>
-						</ul>
-					</section>
-					<section>
-						<p>
-							<img width="50%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-						</p>
-						<h4>Some properties of \(\varprojlim\{I,f,\omega\}\):</h4>
-						<ul>
-							<li>Nonempty</li>
-							<li>Metrizable</li>
-							<li>Compact</li>
-							<li>Connected</li>
-						</ul>
-					</section>
-				</section>
+        <section>
+          <section>
+            <h2>Background and Motivation</h2>
+            <h4>
+              Product space: \(I^\omega=[0,1]^{\{0,1,2,\dots\}}\)
+            </h4>
+            <p>
+              <img width="80%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+            </p>
+          </section>
+          <section>
+            <h4>Bonding map/relation: \(f\subseteq_{cl} I^2\)</h4>
+            <p>
+              <img width="40%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+              <img width="40%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+            </p>
+            <ul>
+              <li>
+                \(f(x)=[a_x,b_x]\) for all \(x\in[0,1]\).
+                (so \(f\) is connected\)
+              </li>
+              <li>\(f\) is surjective.</li>
+              <li>
+                If
+                \(a_x=b_x\) for all \(x\in[0,1]\), then \(f\)
+                corresponds to a continuous function.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Inverse Limit: \(\varprojlim\{I,f,\omega\}\)</h4>
+            <p>
+              <img width="80%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+            </p>
+            <ul>
+              <li>\(\vec x(n)\in f(\vec x(n+1))\)</li>
+            </ul>
+          </section>
+          <section>
+            <p>
+              <img width="50%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+            </p>
+            <h4>Some properties of \(\varprojlim\{I,f,\omega\}\):</h4>
+            <ul>
+              <li>Nonempty</li>
+              <li>Metrizable</li>
+              <li>Compact</li>
+              <li>Connected</li>
+            </ul>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						<h4>
-							Totally ordered index: \(\varprojlim\{I,f,L\}\subseteq I^L\)
-						</h4>
-						<p>
-							<img width="70%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-							<br/>
-							<small>\(L=\omega+\omega\)</small>
-						</p>
-						<ul style="font-size:0.8em">
-							<li>
-								\(\vec x(\alpha)\in f(\vec x(\beta))\)
-								for all \(\alpha\lt\beta\) in \(L\)
-							</li>
-							<li>
-								Assume \(f\) is idempotent:
-								\(f(x)=\{z:\exists y\in f(x)\text{ such that }z\in f(y)\}\),
-								i.e. \(f=f\circ f\).
-							</li>
-						</ul>
-					</section>
-					<section>
-						<p>
-							<img width="50%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-						</p>
-						<h4>Some properties of \(\varprojlim\{I,f,L\}\):</h4>
-						<ul>
-							<li>Nonempty</li>
-							<li>Compact</li>
-							<li>Connected</li>
-							<li>Hausdorff</li>
-							<li><strike>Metrizable</strike> (?)</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Silly example: the identity relation \(\iota\)</h4>
-						<p>
-							<img width="70%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-						</p>
-						<p>\(\varprojlim\{I,\iota,L\}\cong I\) is metrizable</p>
-						<hr>
-						<p>We now assume \(f\not=\iota\).</p>
-					</section>
-					<section>
-						<h4>Counterexample: \(f=\gamma\), \(L=\omega_1\)</h4>
-						<p>
-							<img width="70%"
-									 src="img/omega-product.svg"
-									 style="background:white;">
-						</p>
-						<p>
-							\(\varprojlim\{I,\gamma,\omega_1\}\) is
-							the closed long ray of length \(\omega_1\), so not metrizable
-							(or even Corson compact)
-						</p>
-					</section>
-				</section>
+        <section>
+          <section>
+            <h4>
+              Totally ordered index: \(\varprojlim\{I,f,L\}\subseteq I^L\)
+            </h4>
+            <p>
+              <img width="70%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+              <br/>
+              <small>\(L=\omega+\omega\)</small>
+            </p>
+            <ul style="font-size:0.8em">
+              <li>
+                \(\vec x(\alpha)\in f(\vec x(\beta))\)
+                for all \(\alpha\lt\beta\) in \(L\)
+              </li>
+              <li>
+                Assume \(f\) is idempotent:
+                \(f(x)=\{z:\exists y\in f(x)\text{ such that }z\in f(y)\}\),
+                i.e. \(f=f\circ f\).
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p>
+              <img width="50%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+            </p>
+            <h4>Some properties of \(\varprojlim\{I,f,L\}\):</h4>
+            <ul>
+              <li>Nonempty</li>
+              <li>Compact</li>
+              <li>Connected</li>
+              <li>Hausdorff</li>
+              <li><strike>Metrizable</strike> (?)</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Silly example: the identity relation \(\iota\)</h4>
+            <p>
+              <img width="70%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+            </p>
+            <p>\(\varprojlim\{I,\iota,L\}\cong I\) is metrizable</p>
+            <hr>
+            <p>We now assume \(f\not=\iota\).</p>
+          </section>
+          <section>
+            <h4>Counterexample: \(f=\gamma\), \(L=\omega_1\)</h4>
+            <p>
+              <img width="70%"
+                   src="img/omega-product.svg"
+                   style="background:white;">
+            </p>
+            <p>
+              \(\varprojlim\{I,\gamma,\omega_1\}\) is
+              the closed long ray of length \(\omega_1\), so not metrizable
+              (or even Corson compact, \(W\), Frechet-Urysohn, etc.)
+            </p>
+          </section>
+        </section>
 
         <section>
           <section>
             <h2>The \(\Gamma\) condition</h2>
-						<p>
-							<img width="30%"
-									 src="img/gamma-condition.svg"
-									 style="background:white;">
-						</p>
+            <p>
+              <img width="30%"
+                   src="img/gamma-condition.svg"
+                   style="background:white;">
+            </p>
             <p>
               There exist \(x,y\in I\) such that
               \(\langle x,x\rangle,\langle x,y\rangle,\langle y,y\rangle\)
@@ -208,8 +208,8 @@
             <h4>If \(\iota\subsetneq f\)...</h4>
             <p>
               <img width="30%"
-              		 src="img/contains-iota.svg"
-									 style="background:white;">
+                   src="img/contains-iota.svg"
+                   style="background:white;">
             </p>
             <p>
               \(\Gamma\) trivially holds
@@ -219,8 +219,8 @@
             <h4>Can \(f\) miss \(\iota\) completely?</h4>
             <p>
               <img width="30%"
-              		 src="img/misses-iota.svg"
-									 style="background:white;">
+                   src="img/misses-iota.svg"
+                   style="background:white;">
             </p>
             <p>
               Contradicts connectedness of \(f\).
@@ -230,8 +230,8 @@
             <h4>Can \(f\) only hit one point on \(\iota\)?</h4>
             <p>
               <img width="30%"
-              		 src="img/hits-iota-once.svg"
-									 style="background:white;">
+                   src="img/hits-iota-once.svg"
+                   style="background:white;">
             </p>
             <p>
               Contradicts idempotence of \(f\).
@@ -241,29 +241,29 @@
             <h3>So \(f\cap\iota\) hits two points.</h3>
             <h4>Two cases to handle...</h4>
             <ol>
-            	<li>\(f\cap\iota\) is connected</li>
-            	<li>\(f\cap\iota\) is disconnected</li>
+              <li>\(f\cap\iota\) is connected</li>
+              <li>\(f\cap\iota\) is disconnected</li>
             </ol>
-					</section>
-					<section>
+          </section>
+          <section>
             <h4>
-            	Case 1: \(f\cap\iota\) is connected
+              Case 1: \(f\cap\iota\) is connected
             </h4>
             <p>
               <img width="30%"
-              		 src="img/f-cap-iota-connected.svg"
-									 style="background:white;">
+                   src="img/f-cap-iota-connected.svg"
+                   style="background:white;">
             </p>
             <p>
               Contradicts surjectivity and idempotence of \(f\).
             </p>
-					</section>
-					<section>
+          </section>
+          <section>
             <h4>Case 2: \(f\cap\iota\) is disconnected</h4>
             <p>
               <img width="30%"
-              		 src="img/f-cap-iota-disconnected.svg"
-									 style="background:white;">
+                   src="img/f-cap-iota-disconnected.svg"
+                   style="background:white;">
             </p>
             <p>
               Contradicts idempotence of \(f\).
@@ -271,321 +271,288 @@
           </section>
         </section>
 
-				<section>
-					<section>
-						<h2>Applying condition \(\Gamma\)</h2>
-						<p>
-							Once \(\Gamma\) has been verified for the bonding relation,
-							we may restrict our attention to the two-point discrete space
-							\(2=\{0,1\}\) and investigate \(\varprojlim\{2,\gamma,L\}\).
-						</p>
-	          <p>
-	            <img width="30%"
-	            		 src="img/two-points-nothing-between.svg"
-									 style="background:white;">
-	          </p>
-	         </section>
-				</section>
+        <section>
+          <section>
+            <h2>Applying condition \(\Gamma\)</h2>
+            <p>
+              Once \(\Gamma\) has been verified for the bonding relation,
+              we may restrict our attention to the two-point discrete space
+              \(2=\{0,1\}\) and investigate
+              \(\varprojlim\{2,\gamma,L\}\subseteq\varprojlim\{X,f,L\}\).
+            </p>
+            <p>
+              <img width="30%"
+                   src="img/f-cap-iota-disconnected.svg"
+                   style="background:white;">
+            </p>
+           </section>
+          <section>
+            <h3>The total order \(\check L\)</h3>
+            <p>
+              For any total order \(L\), we may define
+              \(\check L=\{A\subseteq L:a\in L,b\lt a\Rightarrow b\in L\}\)
+              which is totally ordered by \(\subseteq\).
+            </p>
+            <p>
+              <img width="30%"
+                   src="img/f-cap-iota-disconnected.svg"
+                   style="background:white;">
+            </p>
+          </section>
+          <section>
+            <p>
+              For each \(l\in L\), note that \((\leftarrow,l)\)
+              and \((\leftarrow,l]\) are members of \(\check L\).
+            </p>
+            <p>
+              But for example, if \(L=\mathbb Q\),
+              then \((\leftarrow,\pi)\) is also a member of \(\check L\),
+              despite the fact that \(\pi\not\in L\).
+            </p>
+          </section>
+          <section>
+            <h3>The LOTS \(\check L\)</h3>
+            <p>
+              Give \(\check L\) its usual order topology generated by
+              the sets \((A,B)=\{C\in\check L:A\subsetneq C\subsetneq B\}\).
+            </p>
+            <p>
+              Note \(\check L\) is always a compact space.
+            </p>
+          </section>
+          <section>
+            <h3>\(\check L\cong\varprojlim\{2,\gamma,L\}\)</h3>
+            <p>
+              Note that for \(\vec x\in\varprojlim\{2,\gamma,L\}\),
+              a value of \(0\) may stay \(0\) or change to \(1\) as we
+              look to the left.
+            </p>
+            <p>
+              But, once the value changes to \(1\), it's forced to stay there.
+            </p>
+          </section>
+          <section>
+            <p>
+              It follows that each \(\vec x\) is exactly the characteristic
+              function \(\phi_A\) for some \(A\in \check L\); that is,
+              \[
+                \vec x(l)=\phi_A(l)=\begin{cases}
+                  1 &amp; \text{if } l\in A \\
+                  0 &amp; \text{if } l\not\in A
+                \end{cases}
+              \]
+            </p>
+          </section>
+          <section>
+            <p>
+              Note further that in the topology on
+              \(\varprojlim\{2,\gamma,L\}\subseteq 2^L\),
+              a basic open set may fix \(\vec x(a)=1\) and
+              \(\vec x(b)=0\) for some \(a\lt b \in L\).
+            </p>
+            <p>
+              This is exactly the basic open set
+              \(((\leftarrow,a),(\leftarrow,b])\) in \(\check L\).
+            </p>
+            <p>
+              Thus the map \(A\mapsto\phi_A\) is a homeomorphism from
+              \(\check L\) to \(\varprojlim\{2,\gamma,L\}\).
+            </p>
+          </section>
+        </section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+        <section>
+          <section>
+            <h2>Exploiting \(\check L\subseteq\varprojlim\{X,f,L\}\)</h2>
+            <p>
+              Since we've found a copy of the compact space \(\check L\),
+              we can break metrizability and other properties by showing
+              that they cannot hold in \(\check L\).
+            </p>
+          </section>
+          <section>
+            <h3>Ordinals</h3>
+            <p>
+              Consider the totally ordered ordinal spaces such as
+              \(0=\emptyset\), \(3=\{0,1,2\}\),
+              \(\omega=\{0,1,2,\dots\}\),
+              \(\omega+2=\{0,1,\dots,\omega,\omega+1\}\)
+              ordered by \(\subseteq\).
+            </p>
+            <p>
+              Since \(\alpha+1=\alpha\cup\{\alpha\}\), it's not hard to see
+              that \(\check\alpha=\alpha+1\) for every ordinal.
+            </p>
+          </section>
+          <section>
+            <h3>\(W\)-spaces</h3>
+            <p>
+              It's easy to show that every countable \(\alpha+1\) is metrizable.
+            </p>
+            <p>
+              But in fact, even the first uncountable successor \(\omega_1+1\)
+              is not metrizable, or even a \(W\)-space.
+            </p>
+          </section>
+          <section>
+            <h3>\(Gru_{O,P}(X,x)\)</h3>
+            <p>
+              Consider a game with two players \(\mathcal O,\mathcal P\).
+              Player \(\mathcal O\) chooses open neighborhoods \(U_n\) of \(x\),
+              and Player \(\mathcal P\) chooses points \(x_n\in U_n\).
+            </p>
+            <p>
+              Player \(\mathcal O\) wins if after \(\omega\) arounds,
+              \(\lim_{n\to\infty}x_n=x\), and \(\mathcal P\) wins otherwise.
+              \(x\) is a \(W\)-point if \(\mathcal O\) has an unbeatable
+              strategy at that point.
+            </p>
+            <p>
+              In a metrizable space, it's obvious that every point is \(W\)
+              since \(\mathcal O\) can simply choose radii converging to \(0\).
+              Since every point is \(W\), it's a \(W\) space.
+            </p>
+          </section>
+          <section>
+            <h3>\(Gru_{O,P}(\check\omega_1,\omega_1)\)</h3>
+            <p>
+              Since \(\omega_1\) is the first uncountable ordinal, we can
+              show as long as \(\mathcal P\) chooses points different
+              from \(\omega_1\), her sequence won't converge to \(\omega_1\).
+            </p>
+            <p>
+              This is because the game only lasts countably many rounds,
+              so \(\mathcal P\)'s' countable sequence must have an upper
+              bound \(\beta\) in
+              \(\omega_1\). Therefore \((\beta,\rightarrow)\) is a neighborhood
+              of \(\omega_1\) missing every point in \(\mathcal P\)'s
+              sequence.
+            </p>
+          </section>
+          <section>
+            <h3>
+              Nonmetrizability of \(\check L\),
+              \(\varprojlim\{X,f,L\}\)
+            </h3>
+            <p>
+              We've shown that \(\check\alpha\) is metrizable (or even
+              Corson compact, \(W\), Fréchet–Urysohn, etc. etc.)
+              if and only if \(\alpha\) is countable.
+            </p>
+            <p>
+              More generally, it can be shown that
+              \(\check L\) is metrizable if and only if \(L\) is countable,
+              since \(\check L\)'s weight always equals its cardinality.
+            </p>
+            <hr/>
+            <p>
+              Thus a generalized inverse limit may only be metrizable
+              when \(L\) is countable or \(f\) is trivial.
+            </p>
+          </section>
+        </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+        <section>
+          <section>
+            <h2>A few examples</h2>
+            <ul>
+              <li>
+                \(\varprojlim\{I,\gamma,\alpha\}\) is a copy of the closed long
+                ray of length \(\alpha\).
+              </li>
+              <li>
+                \(\varprojlim\{I,\gamma,I\}\) is a copy of
+                \(I\times_{lex} I\).
+              </li>
+              <li>
+                Let \(M\) be a LOTS with \(0\) and maximum \(1\).
+                \(\varprojlim\{M,\gamma,L\}\) is a quotient space
+                of \(\check L\times_{lex}M\).
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Future work</h2>
+            <ul>
+              <li>
+                What other classic (or new/exotic?!)
+                topological spaces may be expressed
+                as \(\varprojlim\{X,f,L\}\)?
+              </li>
+              <li>
+                For uncountable \(L\),
+                \(\check L\) can be a \(W\)-space. Can it be
+                Corson compact? Metrizable?
+              </li>
+              <li>
+                What minimal criteria guarantee that \(f\)
+                satisfies condition \(\Gamma\)?
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>References</h3>
+            <ul style="font-size:0.7em;">
+              <li>
+                Steven Clontz and Scott Varagona,
+                Destruction of Metrizability in Generalized Inverse Limits,
+                Topology Proc. 48 (2016), 289-297.
+              </li>
+              <li>
+                Sina Greenwood and Judy Kennedy,
+                Connected generalized inverse limits,
+                Topology and its Applications,
+                159 (2012), no. 1, 57-68.
+              </li>
+              <li>
+                W. T. Ingram and William S. Mahavier,
+                Inverse limits of upper semi-continuous set valued functions,
+                Houston Journal of Mathematics, vol. 32 (2006) no. 1, 119-130.
+              </li>
+              <li>
+                Van Nall,
+                Connected inverse limits with a set-valued function,
+                Topology Proc. 40 (2012), 167-177.
+              </li>
+              <li>
+                Scott Varagona,
+                Generalized Inverse Limits Indexed by Totally Ordered Sets,
+                http://arxiv.org/abs/1511.00266
+              </li>
+              <li>
+                Patrick Vernon,
+                Inverse limits of set-valued functions indexed by the integers,
+                Topology Applications 171 (2014), 35-40.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h1>Thank you!</h1>
+            <p>
+              Slides available at <a href="http://clontz.org">Clontz.org</a>.
+            </p>
+          </section>
+        </section>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+      </div>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+    </div>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+    <script>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h3>Image credits</h3>
-					<ul>
-						<li>http://www.beautifulfractals.com/2014/04/06/72-throes/</li>
-					</ul>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 
 
@@ -601,19 +568,19 @@ Reveal.addEventListener( 'customevent', function() {
     parallaxBackgroundHorizontal: null,
     parallaxBackgroundVertical: null,
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'plugin/math/math.js', async: true },
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'plugin/math/math.js', async: true },
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>
