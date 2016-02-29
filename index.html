@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Metrizaibility in Generalized Inverse Limits</title>
+    <title>Metrizability in Generalized Inverse Limits</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -78,17 +78,17 @@
           <section>
             <h4>Bonding map/relation: \(f\subseteq_{cl} I^2\)</h4>
             <p>
-              <img width="40%"
-                   src="img/omega-product.svg"
+              <img width="30%"
+                   src="img/bonding-relation-1.svg"
                    style="background:white;">
-              <img width="40%"
-                   src="img/omega-product.svg"
+              <img width="30%"
+                   src="img/bonding-relation-2.svg"
                    style="background:white;">
             </p>
             <ul>
               <li>
                 \(f(x)=[a_x,b_x]\) for all \(x\in[0,1]\).
-                (so \(f\) is connected\)
+                (so \(f\) is connected)
               </li>
               <li>\(f\) is surjective.</li>
               <li>
@@ -102,7 +102,7 @@
             <h4>Inverse Limit: \(\varprojlim\{I,f,\omega\}\)</h4>
             <p>
               <img width="80%"
-                   src="img/omega-product.svg"
+                   src="img/inverse-limit-omega.svg"
                    style="background:white;">
             </p>
             <ul>
@@ -111,8 +111,8 @@
           </section>
           <section>
             <p>
-              <img width="50%"
-                   src="img/omega-product.svg"
+              <img width="60%"
+                   src="img/inverse-limit-omega.svg"
                    style="background:white;">
             </p>
             <h4>Some properties of \(\varprojlim\{I,f,\omega\}\):</h4>
@@ -132,10 +132,8 @@
             </h4>
             <p>
               <img width="70%"
-                   src="img/omega-product.svg"
+                   src="img/inverse-limit-omega-times-two.svg"
                    style="background:white;">
-              <br/>
-              <small>\(L=\omega+\omega\)</small>
             </p>
             <ul style="font-size:0.8em">
               <li>
@@ -148,11 +146,19 @@
                 i.e. \(f=f\circ f\).
               </li>
             </ul>
+           	<p>
+              <img width="15%"
+                   src="img/bonding-relation-2.svg"
+                   style="background:white;">
+              <img width="15%"
+                   src="img/bonding-relation-iota.svg"
+                   style="background:white;">
+            </p>
           </section>
           <section>
             <p>
               <img width="50%"
-                   src="img/omega-product.svg"
+                   src="img/inverse-limit-omega-times-two.svg"
                    style="background:white;">
             </p>
             <h4>Some properties of \(\varprojlim\{I,f,L\}\):</h4>
@@ -165,10 +171,19 @@
             </ul>
           </section>
           <section>
+            <h4>Sillier example: \(L\) is countable</h4>
+            <p>
+              <img width="70%"
+                   src="img/inverse-limit-omega-times-two.svg"
+                   style="background:white;">
+            </p>
+            <p>\(\varprojlim\{I,f,L\}\subseteq I^L\) is metrizable.</p>
+          </section>
+          <section>
             <h4>Silly example: the identity relation \(\iota\)</h4>
             <p>
               <img width="70%"
-                   src="img/omega-product.svg"
+                   src="img/inverse-limit-iota.svg"
                    style="background:white;">
             </p>
             <p>\(\varprojlim\{I,\iota,L\}\cong I\) is metrizable</p>
@@ -178,8 +193,11 @@
           <section>
             <h4>Counterexample: \(f=\gamma\), \(L=\omega_1\)</h4>
             <p>
-              <img width="70%"
-                   src="img/omega-product.svg"
+              <img width="20%"
+                   src="img/bonding-relation-gamma.svg"
+                   style="background:white;">
+              <img width="60%"
+                   src="img/inverse-limit-gamma-omega-1.svg"
                    style="background:white;">
             </p>
             <p>
@@ -195,20 +213,25 @@
             <h2>The \(\Gamma\) condition</h2>
             <p>
               <img width="30%"
-                   src="img/gamma-condition.svg"
+                   src="img/bonding-relation-gamma-Gamma.svg"
+                   style="background:white;">
+              <img width="30%"
+                   src="img/bonding-relation-2-Gamma.svg"
                    style="background:white;">
             </p>
             <p>
               There exist \(x,y\in I\) such that
               \(\langle x,x\rangle,\langle x,y\rangle,\langle y,y\rangle\)
-              are all in \(f\)
+              are all in \(f\).
             </p>
           </section>
           <section>
+            <h2>Theorem: idemptotent, continuum-valued \(f\) have \(\Gamma\)</h2>
+            <hr/>
             <h4>If \(\iota\subsetneq f\)...</h4>
             <p>
               <img width="30%"
-                   src="img/contains-iota.svg"
+                   src="img/bonding-relation-contains-iota.svg"
                    style="background:white;">
             </p>
             <p>
@@ -219,7 +242,7 @@
             <h4>Can \(f\) miss \(\iota\) completely?</h4>
             <p>
               <img width="30%"
-                   src="img/misses-iota.svg"
+                   src="img/bonding-relation-misses-iota.svg"
                    style="background:white;">
             </p>
             <p>
@@ -230,11 +253,11 @@
             <h4>Can \(f\) only hit one point on \(\iota\)?</h4>
             <p>
               <img width="30%"
-                   src="img/hits-iota-once.svg"
+                   src="img/bonding-relation-hits-iota-once.svg"
                    style="background:white;">
             </p>
             <p>
-              Contradicts idempotence of \(f\).
+              Contradicts surjectivity and idempotence of \(f\).
             </p>
           </section>
           <section>
@@ -251,7 +274,7 @@
             </h4>
             <p>
               <img width="30%"
-                   src="img/f-cap-iota-connected.svg"
+                   src="img/bonding-relation-hits-iota-connected.svg"
                    style="background:white;">
             </p>
             <p>
@@ -262,7 +285,7 @@
             <h4>Case 2: \(f\cap\iota\) is disconnected</h4>
             <p>
               <img width="30%"
-                   src="img/f-cap-iota-disconnected.svg"
+                   src="img/bonding-relation-hits-iota-disconnected.svg"
                    style="background:white;">
             </p>
             <p>
@@ -275,14 +298,17 @@
           <section>
             <h2>Applying condition \(\Gamma\)</h2>
             <p>
-              Once \(\Gamma\) has been verified for the bonding relation,
+              Now that \(\Gamma\) has been verified for our bonding relations,
               we may restrict our attention to the two-point discrete space
               \(2=\{0,1\}\) and investigate
               \(\varprojlim\{2,\gamma,L\}\subseteq\varprojlim\{X,f,L\}\).
             </p>
             <p>
-              <img width="30%"
-                   src="img/f-cap-iota-disconnected.svg"
+              <img width="20%"
+                   src="img/bonding-relation-gamma-on-2.svg"
+                   style="background:white;">
+              <img width="55%"
+                   src="img/inverse-limit-gamma-on-2.svg"
                    style="background:white;">
             </p>
            </section>
@@ -294,12 +320,16 @@
               which is totally ordered by \(\subseteq\).
             </p>
             <p>
-              <img width="30%"
-                   src="img/f-cap-iota-disconnected.svg"
+              <img width="60%"
+                   src="img/check-L-open.svg"
+                   style="background:white;">
+              </br>
+              <img width="60%"
+                   src="img/check-L-closed.svg"
                    style="background:white;">
             </p>
           </section>
-          <section>
+<!--           <section>
             <p>
               For each \(l\in L\), note that \((\leftarrow,l)\)
               and \((\leftarrow,l]\) are members of \(\check L\).
@@ -309,7 +339,7 @@
               then \((\leftarrow,\pi)\) is also a member of \(\check L\),
               despite the fact that \(\pi\not\in L\).
             </p>
-          </section>
+          </section> -->
           <section>
             <h3>The LOTS \(\check L\)</h3>
             <p>
@@ -330,6 +360,16 @@
             <p>
               But, once the value changes to \(1\), it's forced to stay there.
             </p>
+            <p>
+              <img width="55%"
+                   src="img/inverse-limit-gamma-on-2.svg"
+                   style="background:white;">
+            </p>
+            <p>
+              <img width="55%"
+                   src="img/check-L-closed.svg"
+                   style="background:white;">
+            </p>
           </section>
           <section>
             <p>
@@ -341,6 +381,16 @@
                   0 &amp; \text{if } l\not\in A
                 \end{cases}
               \]
+            </p>
+            <p>
+              <img width="55%"
+                   src="img/inverse-limit-gamma-on-2.svg"
+                   style="background:white;">
+            </p>
+            <p>
+              <img width="55%"
+                   src="img/check-L-closed.svg"
+                   style="background:white;">
             </p>
           </section>
           <section>
@@ -355,6 +405,28 @@
               \(((\leftarrow,a),(\leftarrow,b])\) in \(\check L\).
             </p>
             <p>
+              <img width="55%"
+                   src="img/inverse-limit-gamma-on-2-basic-open.svg"
+                   style="background:white;">
+            </p>
+            <p>
+              <img width="55%"
+                   src="img/check-L-basic-open.svg"
+                   style="background:white;">
+            </p>
+          </section>
+          <section>
+            <p>
+              <img width="55%"
+                   src="img/inverse-limit-gamma-on-2-basic-open.svg"
+                   style="background:white;">
+            </p>
+            <p>
+              <img width="55%"
+                   src="img/check-L-basic-open.svg"
+                   style="background:white;">
+            </p>
+            <p>
               Thus the map \(A\mapsto\phi_A\) is a homeomorphism from
               \(\check L\) to \(\varprojlim\{2,\gamma,L\}\).
             </p>
@@ -363,7 +435,7 @@
 
         <section>
           <section>
-            <h2>Exploiting \(\check L\subseteq\varprojlim\{X,f,L\}\)</h2>
+            <h2>Exploiting \(\check L\subseteq\varprojlim\{I,f,L\}\)</h2>
             <p>
               Since we've found a copy of the compact space \(\check L\),
               we can break metrizability and other properties by showing
@@ -379,9 +451,17 @@
               \(\omega+2=\{0,1,\dots,\omega,\omega+1\}\)
               ordered by \(\subseteq\).
             </p>
+          </section>
+          <section>
             <p>
               Since \(\alpha+1=\alpha\cup\{\alpha\}\), it's not hard to see
-              that \(\check\alpha=\alpha+1\) for every ordinal.
+              that \(\check\alpha=\alpha+1\) for every ordinal, including
+              the first uncountable ordinal \(\omega_1\).
+            </p>
+            <p>
+              <img width="70%"
+                   src="img/omega-1-plus-one.svg"
+                   style="background:white;">
             </p>
           </section>
           <section>
@@ -393,13 +473,18 @@
               But in fact, even the first uncountable successor \(\omega_1+1\)
               is not metrizable, or even a \(W\)-space.
             </p>
+            <p>
+              <img width="70%"
+                   src="img/omega-1-plus-one.svg"
+                   style="background:white;">
+            </p>
           </section>
           <section>
             <h3>\(Gru_{O,P}(X,x)\)</h3>
             <p>
-              Consider a game with two players \(\mathcal O,\mathcal P\).
-              Player \(\mathcal O\) chooses open neighborhoods \(U_n\) of \(x\),
-              and Player \(\mathcal P\) chooses points \(x_n\in U_n\).
+              <img width="70%"
+                   src="img/gruenhage-game.svg"
+                   style="background:white;">
             </p>
             <p>
               Player \(\mathcal O\) wins if after \(\omega\) arounds,
@@ -407,6 +492,8 @@
               \(x\) is a \(W\)-point if \(\mathcal O\) has an unbeatable
               strategy at that point.
             </p>
+          </section>
+          <section>
             <p>
               In a metrizable space, it's obvious that every point is \(W\)
               since \(\mathcal O\) can simply choose radii converging to \(0\).
@@ -416,13 +503,13 @@
           <section>
             <h3>\(Gru_{O,P}(\check\omega_1,\omega_1)\)</h3>
             <p>
-              Since \(\omega_1\) is the first uncountable ordinal, we can
-              show as long as \(\mathcal P\) chooses points different
-              from \(\omega_1\), her sequence won't converge to \(\omega_1\).
+              <img width="70%"
+                   src="img/omega-1-plus-one-not-frechet.svg"
+                   style="background:white;">
             </p>
             <p>
-              This is because the game only lasts countably many rounds,
-              so \(\mathcal P\)'s' countable sequence must have an upper
+              Because the game only lasts countably many rounds,
+              \(\mathcal P\)'s' countable sequence must have an upper
               bound \(\beta\) in
               \(\omega_1\). Therefore \((\beta,\rightarrow)\) is a neighborhood
               of \(\omega_1\) missing every point in \(\mathcal P\)'s
@@ -432,7 +519,7 @@
           <section>
             <h3>
               Nonmetrizability of \(\check L\),
-              \(\varprojlim\{X,f,L\}\)
+              \(\varprojlim\{I,f,L\}\)
             </h3>
             <p>
               We've shown that \(\check\alpha\) is metrizable (or even
@@ -487,6 +574,10 @@
               <li>
                 What minimal criteria guarantee that \(f\)
                 satisfies condition \(\Gamma\)?
+              </li>
+              <li>
+              	Can similar techniques be used for a family of bonding
+              	relations \(\{f_{\alpha,\beta}:\alpha\lt\beta\in L\}\)?
               </li>
             </ul>
           </section>
