@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Metrizability in Generalized Inverse Limits</title>
+    <title>Generalized inverse limits indexed by arbitrary total orders</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -45,20 +45,25 @@
       <div class="slides">
         <section>
           <section>
-            <h2>Metrizability in Generalized Inverse Limits</h2>
+            <h2>Generalized inverse limits indexed by arbitrary total orders</h2>
             <hr>
             <h4>Steven Clontz</h4>
-            <p>2016 March 3rd</p>
+            <h4>UNC Charlotte</h4>
+            <p>2016 March 5th</p>
             <p>
               <small>
-                Presentation for the <b>University of South Alabama</b>
+                Presentation for the
+                <b>
+                  Spring Southeastern Sectional Meeting
+                  Special Session on Topology and Dynamical Systems
+                </b>
               </small>
             </p>
           </section>
           <section>
-            <h3>Abstract <small><a href="abstract.pdf">[PDF]</a></small></h3>
+            <h3>Abstract</h3>
             <p>
-              For the metric arc I=[0,1] and continuum-valued bonding relation f closed in I^2, the inverse limit lim{I,f,ω} is the subspace of the countable power I^ω containing sequences x satisfying x(n)∈f(x(n+1)). A recent trend in continuum theory is to generalize this notion to lim{I,f,L}, where L is an arbitrary linear order. When L=ω, the inverse limit is a subspace of the metrizable space I^ω; however, we will show that when L is uncountable, the inverse limit cannot be metrizable unless f is trivial. Furthermore, when L is an uncountable well order, it will be shown that the inverse limit is not even Corson compact.
+              Call an idempotent uppersemicontinuous continuum-valued surjective relation on \(X^2\) a CV-relation. The presenter and S. Varagona showed that an inverse limit of a linearly ordered compactum indexed by an ordinal and bonded with a single CV-relation is metrizable if and only if the ordinal is countable. This result may be generalized to any totally ordered index.To demonstrate this, the presenter will give a simple characterization for the inverse limit bonded by the simple CV-relation \(\gamma\) in terms of the lexicographic product of the factor space and linearly ordered index.
             </p>
           </section>
         </section>
@@ -67,7 +72,7 @@
           <section>
             <h2>Background and Motivation</h2>
             <h4>
-              Product space: \(I^\omega=[0,1]^{\{0,1,2,\dots\}}\)
+              Product space: \(X^\omega=[0,1]^{\{0,1,2,\dots\}}\)
             </h4>
             <p>
               <img width="80%"
@@ -76,7 +81,8 @@
             </p>
           </section>
           <section>
-            <h4>Bonding map/relation: \(f\subseteq_{cl} I^2\)</h4>
+            <h4>Bonding relation: \(f\subseteq_{cl} X^2\)</h4>
+            <p>A.K.A. u.s.c. bonding map \(f:X\to C(X)\)</p>
             <p>
               <img width="30%"
                    src="img/bonding-relation-1.svg"
@@ -87,19 +93,14 @@
             </p>
             <ul>
               <li>
-                \(f(x)=[a_x,b_x]\) for all \(x\in[0,1]\).
+                \(f(x)\) is a continuum for all \(x\in X\).
                 (so \(f\) is connected)
               </li>
               <li>\(f\) is surjective.</li>
-              <li>
-                If
-                \(a_x=b_x\) for all \(x\in[0,1]\), then \(f\)
-                corresponds to a continuous function.
-              </li>
             </ul>
           </section>
           <section>
-            <h4>Inverse Limit: \(\varprojlim\{I,f,\omega\}\)</h4>
+            <h4>Inverse Limit: \(\varprojlim\{X,f,\omega\}\)</h4>
             <p>
               <img width="80%"
                    src="img/inverse-limit-omega.svg"
@@ -111,14 +112,15 @@
           </section>
           <section>
             <p>
-              <img width="60%"
+              <img width="50%"
                    src="img/inverse-limit-omega.svg"
                    style="background:white;">
             </p>
-            <h4>Some properties of \(\varprojlim\{I,f,\omega\}\):</h4>
+            <p>Assume \(X\) is a Hausdorff continuum</p>
+            <h4>Some properties of \(\varprojlim\{X,f,\omega\}\):</h4>
             <ul>
               <li>Nonempty</li>
-              <li>Metrizable</li>
+              <li>Metrizable (if \(X\) is)</li>
               <li>Compact</li>
               <li>Connected</li>
             </ul>
@@ -128,7 +130,7 @@
         <section>
           <section>
             <h4>
-              Totally ordered index: \(\varprojlim\{I,f,L\}\subseteq I^L\)
+              Totally ordered index: \(\varprojlim\{X,f,L\}\subseteq X^L\)
             </h4>
             <p>
               <img width="70%"
@@ -161,7 +163,7 @@
                    src="img/inverse-limit-omega-times-two.svg"
                    style="background:white;">
             </p>
-            <h4>Some properties of \(\varprojlim\{I,f,L\}\):</h4>
+            <h4>Some properties of \(\varprojlim\{X,f,L\}\):</h4>
             <ul>
               <li>Nonempty</li>
               <li>Compact</li>
@@ -177,7 +179,7 @@
                    src="img/inverse-limit-omega-times-two.svg"
                    style="background:white;">
             </p>
-            <p>\(\varprojlim\{I,f,L\}\subseteq I^L\) is metrizable.</p>
+            <p>\(\varprojlim\{X,f,L\}\subseteq X^L\) is metrizable.</p>
           </section>
           <section>
             <h4>Silly example: the identity relation \(\iota\)</h4>
@@ -186,12 +188,12 @@
                    src="img/inverse-limit-iota.svg"
                    style="background:white;">
             </p>
-            <p>\(\varprojlim\{I,\iota,L\}\cong I\) is metrizable</p>
+            <p>\(\varprojlim\{X,\iota,L\}\cong X\) is metrizable</p>
             <hr>
             <p>We now assume \(f\not=\iota\).</p>
           </section>
           <section>
-            <h4>Counterexample: \(f=\gamma\), \(L=\omega_1\)</h4>
+            <h4>Counterexample:</h4>
             <p>
               <img width="20%"
                    src="img/bonding-relation-gamma.svg"
@@ -203,7 +205,8 @@
             <p>
               \(\varprojlim\{I,\gamma,\omega_1\}\) is
               the closed long ray of length \(\omega_1\), so not metrizable
-              (or even Corson compact, \(W\), Frechet-Urysohn, etc.)
+              (or even Corson compact, \(W\), Frechet-Urysohn,
+              first-countable, etc.)
             </p>
           </section>
         </section>
@@ -226,345 +229,200 @@
             </p>
           </section>
           <section>
-            <h2>Theorem: idemptotent, continuum-valued \(f\) have \(\Gamma\)</h2>
+            <h3>
+              Theorem: idemptotent, continuum-valued \(f\subseteq I^2\)
+              have \(\Gamma\)
+            </h3>
             <hr/>
-            <h4>If \(\iota\subsetneq f\)...</h4>
+            <h4>Simplest example: \(\gamma\)</h4>
             <p>
               <img width="30%"
-                   src="img/bonding-relation-contains-iota.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              \(\Gamma\) trivially holds
-            </p>
-          </section>
-          <section>
-            <h4>Can \(f\) miss \(\iota\) completely?</h4>
-            <p>
-              <img width="30%"
-                   src="img/bonding-relation-misses-iota.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              Contradicts connectedness of \(f\).
-            </p>
-          </section>
-          <section>
-            <h4>Can \(f\) only hit one point on \(\iota\)?</h4>
-            <p>
-              <img width="30%"
-                   src="img/bonding-relation-hits-iota-once.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              Contradicts surjectivity and idempotence of \(f\).
-            </p>
-          </section>
-          <section>
-            <h3>So \(f\cap\iota\) hits two points.</h3>
-            <h4>Two cases to handle...</h4>
-            <ol>
-              <li>\(f\cap\iota\) is connected</li>
-              <li>\(f\cap\iota\) is disconnected</li>
-            </ol>
-          </section>
-          <section>
-            <h4>
-              Case 1: \(f\cap\iota\) is connected
-            </h4>
-            <p>
-              <img width="30%"
-                   src="img/bonding-relation-hits-iota-connected.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              Contradicts surjectivity and idempotence of \(f\).
-            </p>
-          </section>
-          <section>
-            <h4>Case 2: \(f\cap\iota\) is disconnected</h4>
-            <p>
-              <img width="30%"
-                   src="img/bonding-relation-hits-iota-disconnected.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              Contradicts idempotence of \(f\).
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Applying condition \(\Gamma\)</h2>
-            <p>
-              Now that \(\Gamma\) has been verified for our bonding relations,
-              we may restrict our attention to the two-point discrete space
-              \(2=\{0,1\}\) and investigate
-              \(\varprojlim\{2,\gamma,L\}\subseteq\varprojlim\{X,f,L\}\).
-            </p>
-            <p>
-              <img width="20%"
                    src="img/bonding-relation-gamma-on-2.svg"
                    style="background:white;">
-              <img width="55%"
-                   src="img/inverse-limit-gamma-on-2.svg"
+              <img width="30%"
+                   src="img/bonding-relation-gamma.svg"
                    style="background:white;">
             </p>
-           </section>
+          </section>
           <section>
-            <h3>The total order \(\check L\)</h3>
+            <h3>The total orders \(\check L\), \(\hat L\)</h3>
             <p>
               For any total order \(L\), we may define
               \(\check L=\{A\subseteq L:a\in L,b\lt a\Rightarrow b\in L\}\)
-              which is totally ordered by \(\subseteq\).
+              and \(\hat L=\{A\in\check L:A\text{ is closed}\}\),
+              which are both totally ordered by \(\subseteq\).
             </p>
             <p>
-              <img width="60%"
+              <img width="70%"
                    src="img/check-L-open.svg"
                    style="background:white;">
               </br>
-              <img width="60%"
+              <img width="70%"
                    src="img/check-L-closed.svg"
                    style="background:white;">
-            </p>
-          </section>
-<!--           <section>
-            <p>
-              For each \(l\in L\), note that \((\leftarrow,l)\)
-              and \((\leftarrow,l]\) are members of \(\check L\).
-            </p>
-            <p>
-              But for example, if \(L=\mathbb Q\),
-              then \((\leftarrow,\pi)\) is also a member of \(\check L\),
-              despite the fact that \(\pi\not\in L\).
-            </p>
-          </section> -->
-          <section>
-            <h3>The LOTS \(\check L\)</h3>
-            <p>
-              Give \(\check L\) its usual order topology generated by
-              the sets \((A,B)=\{C\in\check L:A\subsetneq C\subsetneq B\}\).
-            </p>
-            <p>
-              Note \(\check L\) is always a compact space.
-            </p>
-          </section>
-          <section>
-            <h3>\(\check L\cong\varprojlim\{2,\gamma,L\}\)</h3>
-            <p>
-              Note that for \(\vec x\in\varprojlim\{2,\gamma,L\}\),
-              a value of \(0\) may stay \(0\) or change to \(1\) as we
-              look to the left.
-            </p>
-            <p>
-              But, once the value changes to \(1\), it's forced to stay there.
-            </p>
-            <p>
-              <img width="55%"
-                   src="img/inverse-limit-gamma-on-2.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              <img width="55%"
-                   src="img/check-L-closed.svg"
-                   style="background:white;">
-            </p>
-          </section>
-          <section>
-            <p>
-              It follows that each \(\vec x\) is exactly the characteristic
-              function \(\phi_A\) for some \(A\in \check L\); that is,
-              \[
-                \vec x(l)=\phi_A(l)=\begin{cases}
-                  1 &amp; \text{if } l\in A \\
-                  0 &amp; \text{if } l\not\in A
-                \end{cases}
-              \]
-            </p>
-            <p>
-              <img width="55%"
-                   src="img/inverse-limit-gamma-on-2.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              <img width="55%"
-                   src="img/check-L-closed.svg"
-                   style="background:white;">
-            </p>
-          </section>
-          <section>
-            <p>
-              Note further that in the topology on
-              \(\varprojlim\{2,\gamma,L\}\subseteq 2^L\),
-              a basic open set may fix \(\vec x(a)=1\) and
-              \(\vec x(b)=0\) for some \(a\lt b \in L\).
-            </p>
-            <p>
-              This is exactly the basic open set
-              \(((\leftarrow,a),(\leftarrow,b])\) in \(\check L\).
-            </p>
-            <p>
-              <img width="55%"
-                   src="img/inverse-limit-gamma-on-2-basic-open.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              <img width="55%"
-                   src="img/check-L-basic-open.svg"
-                   style="background:white;">
-            </p>
-          </section>
-          <section>
-            <p>
-              <img width="55%"
-                   src="img/inverse-limit-gamma-on-2-basic-open.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              <img width="55%"
-                   src="img/check-L-basic-open.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              Thus the map \(A\mapsto\phi_A\) is a homeomorphism from
-              \(\check L\) to \(\varprojlim\{2,\gamma,L\}\).
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Exploiting \(\check L\subseteq\varprojlim\{I,f,L\}\)</h2>
-            <p>
-              Since we've found a copy of the compact space \(\check L\),
-              we can break metrizability and other properties by showing
-              that they cannot hold in \(\check L\).
-            </p>
-          </section>
-          <section>
-            <h3>Ordinals</h3>
-            <p>
-              Consider the totally ordered ordinal spaces such as
-              \(0=\emptyset\), \(3=\{0,1,2\}\),
-              \(\omega=\{0,1,2,\dots\}\),
-              \(\omega+2=\{0,1,\dots,\omega,\omega+1\}\)
-              ordered by \(\subseteq\).
-            </p>
-          </section>
-          <section>
-            <p>
-              Since \(\alpha+1=\alpha\cup\{\alpha\}\), it's not hard to see
-              that \(\check\alpha=\alpha+1\) for every ordinal, including
-              the first uncountable ordinal \(\omega_1\).
-            </p>
-            <p>
-              <img width="70%"
-                   src="img/omega-1-plus-one.svg"
-                   style="background:white;">
-            </p>
-          </section>
-          <section>
-            <h3>\(W\)-spaces</h3>
-            <p>
-              It's easy to show that every countable \(\alpha+1\) is metrizable.
-            </p>
-            <p>
-              But in fact, even the first uncountable successor \(\omega_1+1\)
-              is not metrizable, or even a \(W\)-space.
-            </p>
-            <p>
-              <img width="70%"
-                   src="img/omega-1-plus-one.svg"
-                   style="background:white;">
-            </p>
-          </section>
-          <section>
-            <h3>\(Gru_{O,P}(X,x)\)</h3>
-            <p>
-              <img width="70%"
-                   src="img/gruenhage-game.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              Player \(\mathcal O\) wins if after \(\omega\) arounds,
-              \(\lim_{n\to\infty}x_n=x\), and \(\mathcal P\) wins otherwise.
-              \(x\) is a \(W\)-point if \(\mathcal O\) has an unbeatable
-              strategy at that point.
-            </p>
-          </section>
-          <section>
-            <p>
-              In a metrizable space, it's obvious that every point is \(W\)
-              since \(\mathcal O\) can simply choose radii converging to \(0\).
-              Since every point is \(W\), it's a \(W\) space.
-            </p>
-          </section>
-          <section>
-            <h3>\(Gru_{O,P}(\check\omega_1,\omega_1)\)</h3>
-            <p>
-              <img width="70%"
-                   src="img/omega-1-plus-one-not-frechet.svg"
-                   style="background:white;">
-            </p>
-            <p>
-              Because the game only lasts countably many rounds,
-              \(\mathcal P\)'s' countable sequence must have an upper
-              bound \(\beta\) in
-              \(\omega_1\). Therefore \((\beta,\rightarrow)\) is a neighborhood
-              of \(\omega_1\) missing every point in \(\mathcal P\)'s
-              sequence.
             </p>
           </section>
           <section>
             <h3>
-              Nonmetrizability of \(\check L\),
-              \(\varprojlim\{I,f,L\}\)
+              Theorem: \(\check L\cong \varprojlim\{2,\gamma,L\}\)
             </h3>
             <p>
-              We've shown that \(\check\alpha\) is metrizable (or even
-              Corson compact, \(W\), Fréchet–Urysohn, etc. etc.)
-              if and only if \(\alpha\) is countable.
+              <img width="55%"
+                   src="img/inverse-limit-gamma-on-2-basic-open.svg"
+                   style="background:white;">
             </p>
             <p>
-              More generally, it can be shown that
-              \(\check L\) is metrizable if and only if \(L\) is countable,
-              since \(\check L\)'s weight always equals its cardinality.
+              <img width="55%"
+                   src="img/check-L-basic-open.svg"
+                   style="background:white;">
             </p>
-            <hr/>
+          </section>
+          <section>
+            <h3>
+              Metrizability of \(\varprojlim\{X,f,L\}\)
+            </h3>
             <p>
-              Thus a generalized inverse limit may only be metrizable
-              when \(L\) is countable or \(f\) is trivial.
+              If \(f\) has \(\Gamma\), then
+              \(\varprojlim\{X,f,L\}\supseteq\varprojlim\{2,\gamma,L\}=\check L\)
+            </p>
+            <p>
+              FACT: \(\check L\) is metrizable iff \(\check L\) is
+              second-countable iff \(L\) is countable
+            </p>
+            <p>
+              Therefore,
+              \(\varprojlim\{X,f,L\}\) cannot be metrizable
+              unless \(f\) lacks \(\Gamma\) or \(L\) is countable.
             </p>
           </section>
         </section>
 
         <section>
           <section>
-            <h2>A few examples</h2>
+            <h2>Characterizing \(\varprojlim\{X,\gamma,L\}\)</h2>
+            <p>
+              \(\check L\) contains
+              the lexicographic product \(L\times_{lex} 2\),
+              adding new points for leftward sets without a supremum.
+            </p>
+            <p>
+              <img width="70%"
+                   src="img/check-L-open.svg"
+                   style="background:white;">
+            </p>
+            <p>
+              <img width="70%"
+                   src="img/check-L-closed.svg"
+                   style="background:white;">
+            </p>
+          </section>
+          <section>
+            <h3>LOTS \(M\)</h3>
+            <p>
+              Suppose \(M\) is a (compact) LOTS with minimum \(0\) and
+              maximum \(1\).
+            </p>
+            <p>
+              A point in \(\varprojlim\{M,\gamma,L\}\) is a thread
+              which is valued \(1\) on some closed leftward set
+              \(A\in\hat L\),
+              except it may have any value of
+              \(M\) on its supremum (if it exists), and \(0\) otherwise.
+            </p>
+          </section>
+          <section>
+            <h4>
+              Temptation:
+            </h4>
+            <p>
+              \[\varprojlim\{M,\gamma,L\}\cong^?\hat L\times_{lex}M\]
+              where \(\langle A,m\rangle\) corresponds to the thread
+              valued \(m\) on \(\sup A\), valued \(1\) for points
+              in \(A\setminus\{\sup A\}\),
+              and valued \(0\) otherwise.
+            </p>
+            <h4>
+              Problems:
+            </h4>
             <ul>
               <li>
-                \(\varprojlim\{I,\gamma,\alpha\}\) is a copy of the closed long
-                ray of length \(\alpha\).
+                If \(l,l+1\in L\) are successors, we cannot have separate
+                points for the single thread where
+                \(\vec x(l)=1\) and \(\vec x(l+1)=0\).
               </li>
               <li>
-                \(\varprojlim\{I,\gamma,I\}\) is a copy of
-                \(I\times_{lex} I\).
-              </li>
-              <li>
-                Let \(M\) be a LOTS with \(0\) and maximum \(1\).
-                \(\varprojlim\{M,\gamma,L\}\) is a quotient space
-                of \(\check L\times_{lex}M\).
+                If \(A\in\hat L\) has no supremum, its corresponding thread is
+                forced to be \(1\) on \(A\) and \(0\) otherwise, so should
+                correspond to a single point.
               </li>
             </ul>
           </section>
           <section>
+            <h3>Solution:</h3>
+            <p>
+              \(\varprojlim\{M,\gamma,L\}\cong(\check L\times_{lex}M )/ \sim\)
+            </p>
+            <ul>
+              <li>
+                \(
+                  \langle(\leftarrow,l),1\rangle
+                    \sim
+                  \langle(\leftarrow,l],0\rangle
+                \)
+              </li>
+              <li>
+                When \(A\in\hat L\) has no supremum or \(A=\emptyset\),
+                \(
+                  \langle A,m\rangle
+                    \sim
+                  \langle A,m'\rangle
+                \)
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>More generally...</h2>
+            <p>Suppose \(0,1\in X\).</p>
+            <p>
+              \[
+                \varprojlim\{X,\gamma,L\}
+                  \cong
+                \left(\bigsqcup_{l\in \hat L}X\right)/ \sim
+              \]
+            </p>
+            <ul>
+              <li>
+                \(
+                  \langle(\leftarrow,l),1\rangle
+                    \sim
+                  \langle(\leftarrow,l],0\rangle
+                \)
+              </li>
+              <li>
+                When \(A\in\hat L\) has no supremum or \(A=\emptyset\),
+                \(
+                  \langle A,m\rangle
+                    \sim
+                  \langle A,m'\rangle
+                \)
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
             <h2>Future work</h2>
             <ul>
               <li>
-                What other classic (or new/exotic?!)
-                topological spaces may be expressed
-                as \(\varprojlim\{X,f,L\}\)?
+                It can be shown that
+                \(
+                  \varprojlim\{M,\nu,L\}
+                    \cong
+                  (\check L\setminus\{\emptyset\})
+                    \times
+                  (M\setminus\{0\})
+                \). Any other simple computations?
               </li>
               <li>
                 For uncountable \(L\),
@@ -584,6 +442,12 @@
           <section>
             <h3>References</h3>
             <ul style="font-size:0.7em;">
+              <li>
+                Steven Clontz,
+                Characterizations of Generalized Inverse Limits
+                Indexed by Total Orders,
+                in preparation
+              </li>
               <li>
                 Steven Clontz and Scott Varagona,
                 Destruction of Metrizability in Generalized Inverse Limits,
