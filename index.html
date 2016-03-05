@@ -49,13 +49,16 @@
             <hr>
             <h4>Steven Clontz</h4>
             <h4>UNC Charlotte</h4>
-            <p>2016 March 5th</p>
+            <p>2016 March 11th</p>
             <p>
               <small>
                 Presentation for the
                 <b>
-                  Spring Southeastern Sectional Meeting
-                  Special Session on Topology and Dynamical Systems
+                  Spring Topology and Dynamics Conference 2016
+                </b>
+                at
+                <b>
+                  Baylor University
                 </b>
               </small>
             </p>
@@ -92,11 +95,8 @@
                    style="background:white;">
             </p>
             <ul>
-              <li>
-                \(f(x)\) is a continuum for all \(x\in X\).
-                (so \(f\) is connected)
-              </li>
               <li>\(f\) is surjective.</li>
+              <li>\(f\) is full.</li>
             </ul>
           </section>
           <section>
@@ -125,7 +125,7 @@
               <li>Nonempty</li>
               <li>Metrizable (if \(X\) is)</li>
               <li>Compact</li>
-              <li>Connected</li>
+              <li>Connected (if \(f\) continuum-valued)</li>
             </ul>
           </section>
         </section>
@@ -172,7 +172,7 @@
             <ul>
               <li>Nonempty</li>
               <li>Compact</li>
-              <li>Connected</li>
+              <li>Connected (if \(f\) continuum-valued)</li>
               <li>Hausdorff</li>
               <li><strike>Metrizable</strike> (?)</li>
             </ul>
@@ -366,7 +366,7 @@
           <section>
             <h3>Solution:</h3>
             <p>
-              \(\varprojlim\{M,\gamma,L\}\cong(\check L\times_{lex}M )/ \sim\)
+              \(\varprojlim\{M,\gamma,L\}\cong(\hat L\times_{lex}M )/ \sim\)
             </p>
             <ul>
               <li>
@@ -423,20 +423,21 @@
               <li>
                 It can be shown that
                 \(
-                  \varprojlim\{M,\nu,L\}\setminus\{\vec 0\}
+                  \varprojlim\{M,\nu,L\}
                     \cong
-                  (\check L\setminus\{\emptyset\})
-                    \times
-                  (M\setminus\{0\})
-                \). Any other simple computations?
+                  (\check L\times M)/\sim
+                \)
+                where \(\langle\emptyset,m\rangle\sim\langle A,0\rangle\).
+                Any other simple computations?
               </li>
               <li>
                 For uncountable \(L\), can
                 \(\check L\) be
-                Corson compact (compact subspace of Sigma product of reals)?
+                Corson compact (embed in \(I^\kappa\) with only countable
+                nonzero coordinates in each thread)?
               </li>
               <li>
-                What minimal criteria guarantee that \(f\)
+                Can it be shown that any idempotent \(f\)
                 satisfies condition \(\Gamma\)?
               </li>
               <li>
